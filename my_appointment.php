@@ -2,15 +2,6 @@
 require_once('header.php');
 
 if (isset($_POST["submit"])) {
-	
-					/*//getting the list of users
-        $query = "SELECT * FROM doctor_add_schedule WHERE Schedule_ID = '{$SID}'";
-        $result_set = mysqli_query($connection, $query);
-        
-            $user = mysqli_fetch_assoc($result_set);
-						$D_ID	= $user['Schedule_ID'];*/
-	
-	
 		if (isset($_GET['pun'])) {
 				$U_na = mysqli_real_escape_string($connection, $_GET['pun']);
 				$Ap_id = mysqli_real_escape_string($connection, $_GET['appid']);
@@ -21,7 +12,7 @@ if (isset($_POST["submit"])) {
 
 ?>
 
-<h1 class="font-weight-bold">My Appointment</h1>
+<h1 class="font-weight-bold">Doctor List</h1>
        <table class="table">
                   <thead class="thead-dark">
                     <tr>
