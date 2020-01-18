@@ -1,2 +1,2 @@
-# Newlanka
-Newlanka Web system
+# Newlanka-web-system
+Web assigment
