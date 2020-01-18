@@ -63,4 +63,5 @@ $idn		= $_SESSION['id_number'];
             </table>
     </div>
 
+
 <?php require_once('footer.php'); ?>
