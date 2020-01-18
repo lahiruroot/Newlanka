@@ -7,6 +7,9 @@ function input($data) {
 		$data = stripslashes($data);
 		$data = htmlspecialchars($data);
 		return $data;
+		
+		
+		
 	}
 $validation2 = array ("Doctor_Speciality"=>"");
 	
@@ -31,6 +34,9 @@ if (isset($_POST["submit"])) {
 			
 				
 		
+
+
+
 list($a) = array_values($validation2);
 			
 			if (empty($a)) {
