@@ -182,6 +182,7 @@ list($a) = array_values($validation2);
     </tr>
     
   </thead>
+		
   <tbody>
   
     <?php echo $Ap_list; ?>
