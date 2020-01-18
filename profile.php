@@ -15,7 +15,7 @@ $idn		= $_SESSION['id_number'];
               <?php
 			  
 			  //getting the list of users
-        $query = "SELECT * FROM doctor_db WHERE ID_Number='{$idn}' ORDER BY First_Name";
+        $query = "SELECT * FROM paction_db WHERE ID_Number='{$idn}' ORDER BY First_Name";
         $users = mysqli_query($connection, $query);
         
             while ($user = mysqli_fetch_assoc($users)) {
@@ -31,12 +31,8 @@ $idn		= $_SESSION['id_number'];
                   <td><?php echo $user['Last_Name'] ?></td>
                 </tr>
                 <tr>
-                  <td>Doctor Speciality</td>
-                  <td><?php echo $user['Doctor_Speciality'] ?></td>
-                </tr>
-                <tr>
                   <td>Email</td>
-                  <td><?php echo $user['Email'] ?></td>
+                  <td><?php echo $user['User_Name'] ?></td>
                 </tr>
                 <tr>
                   <td>ID Number</td>
@@ -57,10 +53,6 @@ $idn		= $_SESSION['id_number'];
                 <tr>
                   <td>DOB</td>
                   <td><?php echo $user['DOB'] ?></td>
-                </tr>
-                <tr>
-                  <td>Gender</td>
-                  <td><?php echo $user['Gender'] ?></td>
                 </tr>
                 <tr>
                   <td>Last Login</td>

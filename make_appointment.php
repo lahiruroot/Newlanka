@@ -12,6 +12,7 @@ $validation2 = array ("Doctor_Speciality"=>"");
 
 $Doctor_Speciality	= "";
 $Ap_list = '';
+$AQ = '';
 
 if (isset($_POST["submit"])) {
 	if ($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -44,13 +45,13 @@ list($a) = array_values($validation2);
 						$D		= $user['Schedule_Date'];
 						$ST		= $user['Start_Time'];
 						$ET		= $user['End_Time'];
-						$AQ		= $user['At_1Hour_Appointment_Quentity'];
 							/*if ($result_set) {
 									echo "ok";
 									
 								} */
-								
-						if ($AQ == 5) {
+							
+							
+					if ($AQ == 5) {
 								$sql="UPDATE doctor_add_schedule SET 	At_1Hour_Appointment_Quentity = '4' WHERE Schedule_ID = '{$D_ID}';";
 								mysqli_query($connection, $sql);
 							} elseif ($AQ == 4) {
@@ -65,7 +66,7 @@ list($a) = array_values($validation2);
 								} elseif ($AQ == 1) {
 									$sql="UPDATE doctor_add_schedule SET 	At_1Hour_Appointment_Quentity = '0' WHERE Schedule_ID = '{$D_ID}';";
 									mysqli_query($connection, $sql);
-								}
+								}		
 								
 						
 						
@@ -75,7 +76,9 @@ list($a) = array_values($validation2);
             $user2 = mysqli_fetch_assoc($result_set2);
 						$DN		= $user2['First_Name'];
 						$DC		= $user2['doctor_channeling_costs'];
-							
+            $D		= $user['Schedule_Date'];
+						$ST		= $user['Start_Time'];
+						$ET		= $user['End_Time'];	
 							/*if ($result_set) {
 									echo "ok";
 									
@@ -89,7 +92,7 @@ list($a) = array_values($validation2);
 										$Ap_list .= "<td><h6><small>{$D}</small></h6></td>";
 										$Ap_list .= "<td><h6><small>{$ST}</small></h6></td>";
 										$Ap_list .= "<td><h6><small>{$ET}</small></h6></td>";
-							if ($AQ == 0) {$Ap_list .= "<td><a href=\"#\" class=\"text-danger\" >Book Now</a></td>";} else {$Ap_list .= "<td><a href=\"../pay_bill.php?var1={$_SESSION['id_number']}&Book_Now={$S_ID}\" class=\"text-primary\">Book Now</a></td>";}			
+										$Ap_list .= "<td><a href=\"../pactionpay_bill.php?var1={$_SESSION['id_number']}&Book_Now={$S_ID}\" class=\"text-primary\">Book Now</a></td>";
 								$Ap_list .= "</tr>";
 								
 						
@@ -103,7 +106,7 @@ list($a) = array_values($validation2);
 
 ?>
 
-<h2 style="padding-top:0;">Add Schedule</h2>
+<h2 style="padding-top:0;">Make Appointment</h2>
     <div class="jumbotron bg-light border border-dark" style="margin:10px">
         
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">

@@ -12,7 +12,7 @@ if (isset($_POST["submit"])) {
 
 ?>
 
-<h1 class="font-weight-bold">Doctor List</h1>
+<h1 class="font-weight-bold">My Appointment</h1>
        <table class="table">
                   <thead class="thead-dark">
                     <tr>
