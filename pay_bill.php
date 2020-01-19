@@ -42,7 +42,7 @@ $validation = array ("Name_on_Card"=>"", "Credit_card_number"=>"", "Exp_Month"=>
 					
 					$user2 = mysqli_fetch_assoc($result_set2);
 								$Name		= $user2['First_Name'];
-								$Email		= $user2['User  Name'];
+								$Email		= $user2['Email'];
 								$Address	= $user2['Address'];
 								$City		= $user2['City'];
 								$Dob		= $user2['DOB'];
